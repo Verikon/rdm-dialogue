@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"skipLibCheck": true,
 		"baseUrl": "./src/",
 		"outDir": "./dist/",
 		"sourceMap": false,
@@ -11,7 +12,10 @@
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true
+		"experimentalDecorators": true,
+		"paths": {
+			"@source/*": ["./src"]
+		}
 	},
 	"exclude": [
 		"node_modules"

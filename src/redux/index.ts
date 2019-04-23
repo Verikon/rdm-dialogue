@@ -9,7 +9,7 @@ export function getDialogueModule( key?:string ) {
     return {
         id: 'rdm-dialogue',
         reducerMap: {
-            [key]: Reducer
+            [key]: new Reducer().respond
         },
         sagas:[DialogueSaga]
     }

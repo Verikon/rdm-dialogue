@@ -1,10 +1,16 @@
-import {State} from './types';
+import * as T from '../types';
 
 export default class Reducers {
 
-  initialState:State = {
+  initialState:T.Dialogue = {
       active: false,
-      message: null
+      message: null,
+      alertLabel: 'Ok',
+      confirmLabel: 'Confirm',
+      cancelLabel: 'Cancel',
+      onConfirm: 'RDM_DIALOGUE_CONFIRM',
+      onCancel: 'RDM_DIALOGUE_CANCEL',
+
   };
   
   constructor() {
@@ -20,19 +26,17 @@ export default class Reducers {
     return state;
   }
 
-  rdm_open_dialogue( state:State, action:any ):State{
+  rdm_open_dialogue( state:T.Dialogue, action:any ):T.Dialogue{
 
-    state = Object.assign({}, state);
+    state = Object.assign({}, state, action);
     state.active = true;
-    state.message = action.message;
     return state
   }
 
-  rdm_close_dialogue( state:State, action:any ):State {
+  rdm_close_dialogue( state:T.Dialogue, action:any ):T.Dialogue {
 
-    state = Object.assign({}, state);  
+    state = Object.assign({}, state, this.initialState);  
     state.active = false;
-    state.message = null;
     return state;
   }
 }

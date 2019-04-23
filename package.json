@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "serve": "parcel spec/html/rig1.html"
   },
   "devDependencies": {
     "@types/react": "^16.8.14",
@@ -15,12 +16,18 @@
     "@types/react-redux": "^7.0.8",
     "@types/redux": "^3.6.0",
     "@types/redux-saga": "^0.10.5",
+    "babel-polyfill": "^6.26.0",
+    "mocha": "^6.1.4",
+    "parcel-bundler": "^1.12.3",
+    "puppeteer": "^1.14.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
     "redux": "^4.0.1",
     "redux-dynamic-modules": "^3.5.0",
+    "redux-dynamic-modules-saga": "^3.5.0",
     "redux-saga": "^1.0.2",
+    "sass": "^1.19.0",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
   }

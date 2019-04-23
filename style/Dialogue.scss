@@ -1,0 +1,54 @@
+@import 'theme';
+
+.rdm-dialogue {
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 0; padding: 0;
+    height: 100%;
+    width: 100%;
+
+    >.bkg {
+
+        height: 100%;
+        width: 100%;
+        background-color: $fog;
+    }
+
+    >.panel {
+
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: $lightest;
+        min-width: 30em;
+        min-height: 10em;
+        user-select: none;
+
+        >.heading {
+
+            background-color: $darkest;
+            height: 1em;
+            flex: 0 0 auto;
+        }
+
+        >.contents {
+            padding: 1em;
+            flex: 1 1 auto;
+        }
+
+        >.action {
+            flex: 0 0 auto;
+        }
+    }
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    &.visible {
+        opacity: 1;
+    }
+}
