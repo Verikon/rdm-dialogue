@@ -1,6 +1,6 @@
 {
   "name": "rdm-dialogue",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "repository": "https://github.com/Verikon/rdm-dialogue.git",
   "author": "Bren Norris <bren@launchboard.com>",
