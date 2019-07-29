@@ -39,8 +39,7 @@ class Panel extends Component<T.Dialogue> {
   transitionTime:number = 250;
 
   state = {
-    phase: 'hidden',
-    action: {}
+    phase: 'hidden'
   }
 
   constructor( props ) {
@@ -124,11 +123,10 @@ class Panel extends Component<T.Dialogue> {
 
   onConfirm = evt => {
 
-    const {dispatch, onConfirm:type, confirmAction} = this.props;
-    let action = confirmAction ? Object.assign({}, confirmAction) : {};
-
+    const {dispatch, onConfirm:type} = this.props;
+    
     this.setState({phase: 'hidden'});
-    dispatch(Object.assign({type}, action));
+    dispatch({type});
     setTimeout(_ => this.props.dispatch({type: 'rdm_close_dialogue'}), this.transitionTime)
   };
 

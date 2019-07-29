@@ -9,6 +9,7 @@ export default class Reducers {
       confirmLabel: 'Confirm',
       cancelLabel: 'Cancel',
       onConfirm: 'RDM_DIALOGUE_CONFIRM',
+      confirmAction: {},
       onCancel: 'RDM_DIALOGUE_CANCEL',
 
   };
@@ -30,6 +31,7 @@ export default class Reducers {
 
     state = Object.assign({}, state, action);
     state.active = true;
+    state.confirmAction = action.confirmAction || {};
     return state
   }
 
@@ -37,6 +39,7 @@ export default class Reducers {
 
     state = Object.assign({}, state, this.initialState);  
     state.active = false;
+    state.confirmAction = {};
     return state;
   }
 }

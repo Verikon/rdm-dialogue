@@ -25,7 +25,8 @@ export interface Dialogue {
 
     confirm?: boolean;
     onConfirm: string;
-    onCancel: string;
     confirmLabel: string;
+    confirmAction: object;
+    onCancel: string;
     cancelLabel: string;
 }

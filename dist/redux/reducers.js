@@ -9,6 +9,7 @@ class Reducers {
             confirmLabel: 'Confirm',
             cancelLabel: 'Cancel',
             onConfirm: 'RDM_DIALOGUE_CONFIRM',
+            confirmAction: {},
             onCancel: 'RDM_DIALOGUE_CANCEL',
         };
         this.respond = this.respond.bind(this);
@@ -23,11 +24,13 @@ class Reducers {
     rdm_open_dialogue(state, action) {
         state = Object.assign({}, state, action);
         state.active = true;
+        state.confirmAction = action.confirmAction || {};
         return state;
     }
     rdm_close_dialogue(state, action) {
         state = Object.assign({}, state, this.initialState);
         state.active = false;
+        state.confirmAction = {};
         return state;
     }
 }

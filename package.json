@@ -1,6 +1,6 @@
 {
   "name": "rdm-dialogue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "repository": "https://github.com/Verikon/rdm-dialogue.git",
   "author": "Bren Norris <bren@launchboard.com>",
@@ -30,5 +30,8 @@
     "sass": "^1.19.0",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
+  },
+  "peerDependencies": {
+    
   }
 }
